@@ -1,0 +1,68 @@
+:root {
+  --red: #c9391b;
+  --red-deep: #a52c12;
+  --teal: #3ec9c6;
+  --teal-deep: #17908e;
+  --teal-ink: #073b3a;
+  --yellow: #ffc928;
+  --bg: #f4f9fb;
+  --surface: #ffffff;
+  --surface-2: #e6f1f4;
+  --text: #1d1d1f;
+  --muted: #566169;
+  --line: #d3e1e7;
+  --accent: #c9391b; /* red italic accent words */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --radius: 18px;
+  --max: 1240px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --header-h: 96px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme='dark'] {
+  --bg: #0f1518;
+  --surface: #172025;
+  --surface-2: #1e2b31;
+  --text: #f1f5f6;
+  --muted: #a9b7be;
+  --line: #2b3a41;
+  --accent: #ff7d5c;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { position: relative; /* non-static: required by Framer Motion useScroll({ target }) */ scroll-behavior: smooth; scroll-padding-top: var(--header-h); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--font-body); font-size: 1rem; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.12; margin: 0; font-weight: 900; }
+h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+h2 em, h1 em { font-style: italic; color: var(--accent); }
+p { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+
+.container { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 4px; }
+.skip-link {
+  position: fixed; top: 0.5rem; left: 0.5rem; z-index: 400; padding: 0.6rem 1rem;
+  background: var(--yellow); color: #111; font-weight: 700; border-radius: 8px; transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}

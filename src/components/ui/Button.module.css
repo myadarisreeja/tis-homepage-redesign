@@ -1,0 +1,22 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 48px; padding: 0.7rem 1.7rem; border: 2px solid transparent; border-radius: 999px;
+  font-weight: 700; font-size: 0.95rem; text-decoration: none; cursor: pointer;
+  transition: transform 0.25s var(--ease), background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+.red { background: var(--red); color: #fff; }
+.red:hover { background: var(--red-deep); }
+.dark { background: #111; color: #fff; }
+.dark:hover { background: #333; }
+.teal { background: var(--teal); color: var(--teal-ink); }
+.teal:hover { background: #63ddda; }
+.light { background: #fff; color: #222; }
+.light:hover { background: var(--yellow); }
+.outline { background: transparent; color: var(--text); border-color: currentColor; }
+.outline:hover { background: var(--text); color: var(--bg); }
+.outlineLight { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.75); }
+.outlineLight:hover { background: #fff; color: var(--red); }

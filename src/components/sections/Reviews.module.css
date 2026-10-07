@@ -1,0 +1,14 @@
+.section {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  background: linear-gradient(rgba(10, 40, 38, 0.82), rgba(10, 40, 38, 0.9)), var(--bg-img) center / cover, #0d3a38;
+}
+.head { margin-bottom: 1.5rem; }
+.head h2 { color: #fff; }
+.card {
+  width: min(80vw, 300px); display: grid; justify-items: center; gap: 0.35rem; padding: 1.5rem 1.25rem; text-align: center;
+  border-radius: var(--radius); background: var(--surface); color: var(--text); box-shadow: 0 16px 30px -18px rgba(0, 0, 0, 0.7);
+}
+.card .avatar { width: 64px; height: 64px; min-height: 0; border-radius: 50%; object-fit: cover; background: var(--surface-2); font-size: 1.5rem; }
+.name { font-family: var(--font-body); font-size: 1rem; font-weight: 700; }
+.relation { color: var(--accent); font-size: 0.78rem; font-weight: 700; }
+.text { margin-top: 0.4rem; color: var(--muted); font-size: 0.85rem; line-height: 1.55; }

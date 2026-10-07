@@ -1,0 +1,15 @@
+.section { padding-block: clamp(2rem, 5vw, 4rem); }
+.grid { display: grid; gap: 1.25rem; align-items: center; }
+.title { display: grid; justify-items: center; gap: 0.3rem; padding: 1.5rem 2rem; text-align: center; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: 0 12px 30px -20px rgba(0, 0, 0, 0.5); color: var(--accent); }
+.title h2 { font-size: 1.6rem; color: var(--text); }
+.title p { color: var(--muted); font-weight: 700; }
+.cards { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, 1fr); }
+.card {
+  display: grid; align-content: start; gap: 0.3rem; padding: 1.2rem; border-radius: 12px; color: #fff;
+  background: linear-gradient(160deg, #d84a28, var(--red-deep)); transition: transform 0.3s var(--ease), box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-6px) rotate(-1deg); box-shadow: 0 16px 30px -14px rgba(165, 44, 18, 0.7); }
+.num { font-family: var(--font-display); font-weight: 900; font-size: 2.6rem; line-height: 1; color: var(--yellow); }
+.card h3 { font-size: 1.15rem; font-style: italic; }
+.text { font-size: 0.8rem; line-height: 1.45; opacity: 0.92; }
+@media (min-width: 1000px) { .grid { grid-template-columns: 240px 1fr; } .cards { grid-template-columns: repeat(4, 1fr); } }

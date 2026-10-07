@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 1rem; overflow-y: auto;
+  background: linear-gradient(rgba(0, 20, 20, 0.45), rgba(0, 20, 20, 0.55)), var(--campus) center / cover, #12302f;
+}
+.scrim { position: fixed; inset: 0; border: 0; background: transparent; cursor: default; }
+.dialog {
+  position: relative; display: grid; width: min(100%, 940px); margin-block: auto; overflow: hidden;
+  border-radius: 28px; background: var(--surface); color: var(--text); box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.6);
+}
+.close {
+  position: absolute; top: 0.8rem; right: 0.8rem; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px;
+  border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.75); color: #fff; cursor: pointer;
+}
+.contact { padding: 2rem 1.75rem; display: grid; gap: 1rem; align-content: start; background: var(--surface); }
+.contact h3 { font-size: 1.5rem; }
+.contact address { font-style: normal; display: grid; gap: 0.8rem; font-size: 0.9rem; }
+.contact p { display: flex; gap: 0.6rem; align-items: flex-start; }
+.contact svg { flex-shrink: 0; margin-top: 0.25rem; color: var(--teal-deep); }
+.contact a { text-decoration: none; }
+.contact a:hover { color: var(--accent); text-decoration: underline; }
+.logo { width: 90px; height: 90px; margin-top: 0.5rem; object-fit: contain; border-radius: 12px; }
+
+.formPane { padding: 2rem 1.75rem; background: var(--teal); color: var(--teal-ink); }
+.formPane h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 1.2rem; color: #05302f; }
+.form { display: grid; gap: 0.9rem; }
+.row { display: grid; gap: 0.9rem; }
+.field { display: grid; gap: 0.3rem; }
+.field label { font-size: 0.85rem; font-weight: 700; }
+.field input, .field select {
+  width: 100%; min-height: 46px; padding: 0.6rem 0.85rem; border: 2px solid transparent; border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9); color: #111; font: inherit;
+}
+.field input:disabled { opacity: 0.6; }
+.field input:focus-visible, .field select:focus-visible { outline: none; border-color: #111; }
+.field [aria-invalid='true'] { border-color: #b3261e; }
+.inline { display: flex; gap: 0.5rem; align-items: stretch; }
+.inline input { flex: 1; min-width: 0; }
+.code { display: grid; place-items: center; padding-inline: 0.8rem; border-radius: 10px; background: rgba(255, 255, 255, 0.9); font-weight: 700; color: #111; }
+.small { min-height: 46px; padding: 0.4rem 1rem; font-size: 0.8rem; white-space: nowrap; }
+.consent label { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.8rem; cursor: pointer; }
+.consent input { width: 22px; height: 22px; flex-shrink: 0; accent-color: #111; }
+.error { color: #8c1a13; font-size: 0.8rem; font-weight: 700; }
+.submit { width: 100%; }
+.done { display: grid; gap: 0.9rem; justify-items: start; padding-block: 1rem; }
+.check { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: #111; color: var(--teal); }
+
+@media (min-width: 640px) { .row { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 860px) { .dialog { grid-template-columns: 0.8fr 1.2fr; } .contact { padding: 2.5rem 2rem; } .formPane { padding: 2.5rem 2.25rem; } }
