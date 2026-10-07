@@ -3,8 +3,8 @@
 An animated rebuild of the [Tulas International School](https://tis.edu.in/) homepage. It keeps the original brand look (red-orange and teal, serif headlines with red italic accents, circular student photos) and all of the original copy, and adds smooth motion, dark mode and full mobile responsiveness.
 
 ## 🚀 Live Demo
-- **Live URL:** [Insert Vercel / Netlify Link Here]
-- **Repository:** [Insert GitHub Repo Link Here]
+- **Live URL:** https://tis-homepage-redesign-brown-six.vercel.app/
+- **Repository:** https://github.com/myadarisreeja/tis-homepage-redesign
 
 ## 🛠️ Tech Stack
 - **Framework:** React 18 + Vite
